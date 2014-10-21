@@ -18,7 +18,7 @@ fi
 #
 
 export EDITOR='atom'
-export VISUAL='atom --new-window'
+export VISUAL='atom'
 export PAGER='less'
 
 #
