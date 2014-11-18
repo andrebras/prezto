@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='atom'
-export VISUAL='atom'
+export EDITOR='subl'
+export VISUAL='subl'
 export PAGER='less'
 
 #
