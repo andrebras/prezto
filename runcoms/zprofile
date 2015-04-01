@@ -38,6 +38,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
 cdpath=(
+  /Users/andrebras/Lab/work
   /Users/andrebras/Lab
   /Users/andrebras
   /Volumes

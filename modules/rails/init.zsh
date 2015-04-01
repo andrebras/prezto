@@ -33,3 +33,4 @@ fi
 # alias rors='bundle exec rails server'
 # alias rorsd='bundle exec rails server --debugger'
 # alias rorx='bundle exec rails destroy'
+
