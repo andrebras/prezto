@@ -10,27 +10,20 @@
 #
 # Screenshots:
 #   http://i.imgur.com/HyRvv.png
+#   http://i.imgur.com/HyRvv.png
 #
 
 function prompt_steeef_precmd {
   # Check for untracked files or updated submodules since vcs_info does not.
   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    branch_format="(${_prompt_steeef_colors[1]}%b%f%u%c${_prompt_steeef_colors[4]}●%f)"
+    branch_format=" [${_prompt_steeef_colors[1]}%b%f%u%c${_prompt_steeef_colors[4]}●%f]"
   else
-    branch_format="(${_prompt_steeef_colors[1]}%b%f%u%c)"
+    branch_format=" [${_prompt_steeef_colors[1]}%b%f%u%c]"
   fi
 
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
 
   vcs_info 'prompt'
-
-  if (( $+functions[python-info] )); then
-    python-info
-  fi
-
-  if (( $+functions[ruby-info] )); then
-    ruby-info
-  fi
 }
 
 function prompt_steeef_setup {
@@ -85,17 +78,11 @@ function prompt_steeef_setup {
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
   zstyle ':vcs_info:*:prompt:*' nvcsformats   ""
 
-  # Set python-info parameters.
-  zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
-  # Set ruby-info parameters.
-  zstyle ':prezto:module:ruby:info:version' format '(%v)'
-
   # Define prompts.
   PROMPT="
-${_prompt_steeef_colors[4]}%~%f "'${vcs_info_msg_0_}'"
+${_prompt_steeef_colors[4]}%n%f ${_prompt_steeef_colors[5]}%~%f"'${vcs_info_msg_0_}'"
 "'$python_info[virtualenv]'"$ "
   RPROMPT=''
 }
 
 prompt_steeef_setup "$@"
-
