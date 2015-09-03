@@ -213,6 +213,7 @@ alias gp='git push'
 alias gr='git rebase'
 
 # Stash (s)
+alias gsp='git stash pop'
 alias gss='git stash save --include-untracked'
 
 # Working Copy (w)
