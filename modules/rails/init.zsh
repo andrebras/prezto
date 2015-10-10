@@ -34,3 +34,8 @@ fi
 # alias rorsd='bundle exec rails server --debugger'
 # alias rorx='bundle exec rails destroy'
 
+alias ra='bundle exec rails'
+alias rc='bundle exec rails console'
+alias rs='bundle exec rails server'
+
+
