@@ -36,6 +36,4 @@ fi
 
 alias ra='bundle exec rails'
 alias rc='bundle exec rails console'
-alias rs='bundle exec rails server'
-
-
+alias rs='bundle exec puma -e development -p 3000'
