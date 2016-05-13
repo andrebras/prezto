@@ -80,7 +80,7 @@ function prompt_sorin_precmd {
   prompt_sorin_pwd
 
   # Define prompts.
-  RPROMPT='${editor_info[overwrite]}%(?:: %F{1}⏎%f)${VIM:+" %B%F{6}V%f%b"}'
+  RPROMPT='${editor_info[overwrite]}%(?:: %F{8}␍%f)${VIM:+" %B%F{6}V%f%b"}'
 
   # Kill the old process of slow commands if it is still running.
   if (( _prompt_sorin_precmd_async_pid > 0 )); then
@@ -108,25 +108,25 @@ function prompt_sorin_setup {
 
   # Set editor-info parameters.
   zstyle ':prezto:module:editor:info:completing' format '%B%F{7}...%f%b'
-  zstyle ':prezto:module:editor:info:keymap:primary' format ' %B%F{1}❯%F{3}❯%F{2}❯%f%b'
-  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format ' %F{3}♺%f'
-  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %B%F{2}❮%F{3}❮%F{1}❮%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary' format ' %B%F{8}❯%f%b'
+  zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format ' %F{8}♺%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format ' %B%F{8}❮%F{8}❮%F{8}❮%f%b'
 
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:action' format '%F{7}:%f%%B%F{9}%s%f%%b'
-  zstyle ':prezto:module:git:info:added' format ' %%B%F{2}✚%f%%b'
-  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{13}⬆%f%%b'
-  zstyle ':prezto:module:git:info:behind' format ' %%B%F{13}⬇%f%%b'
-  zstyle ':prezto:module:git:info:branch' format ' %%B%F{2}%b%f%%b'
-  zstyle ':prezto:module:git:info:commit' format ' %%B%F{3}%.7c%f%%b'
-  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{1}✖%f%%b'
-  zstyle ':prezto:module:git:info:modified' format ' %%B%F{4}✱%f%%b'
-  zstyle ':prezto:module:git:info:position' format ' %%B%F{13}%p%f%%b'
-  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{5}➜%f%%b'
-  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{6}✭%f%%b'
-  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{3}═%f%%b'
-  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{7}◼%f%%b'
+  zstyle ':prezto:module:git:info:action' format '%F{8}:%f%%B%F{9}%s%f%%b'
+  zstyle ':prezto:module:git:info:added' format ' %%B%F{8}＋%f%%b'
+  zstyle ':prezto:module:git:info:ahead' format ' %%B%F{8}⇡%f%%b'
+  zstyle ':prezto:module:git:info:behind' format ' %%B%F{8}⇣%f%%b'
+  zstyle ':prezto:module:git:info:branch' format ' %%B%F{8}%b%f%%b'
+  zstyle ':prezto:module:git:info:commit' format ' %%B%F{8}%.7c%f%%b'
+  zstyle ':prezto:module:git:info:deleted' format ' %%B%F{8}✕%f%%b'
+  zstyle ':prezto:module:git:info:modified' format ' %%B%F{8}✺%f%%b'
+  zstyle ':prezto:module:git:info:position' format ' %%B%F{8}%p%f%%b'
+  zstyle ':prezto:module:git:info:renamed' format ' %%B%F{8}⇢%f%%b'
+  zstyle ':prezto:module:git:info:stashed' format ' %%B%F{8}⿳%f%%b'
+  zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{8}＝%f%%b'
+  zstyle ':prezto:module:git:info:untracked' format ' %%B%F{8}⦙%f%%b'
   zstyle ':prezto:module:git:info:keys' format \
     'status' '$(coalesce "%b" "%p" "%c")%s%A%B%S%a%d%m%r%U%u'
 
@@ -142,7 +142,7 @@ function prompt_sorin_preview {
   local +h SPROMPT=''
 
   editor-info 2>/dev/null
-  prompt_preview_theme 'sorin'
+  prompt_preview_theme 'sorin_mono'
 }
 
 prompt_sorin_setup "$@"
