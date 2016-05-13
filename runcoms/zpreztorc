@@ -24,22 +24,29 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'git' \
-  'ruby' \
-  'rails' \
-  'node' \
-  'osx' \
-  'syntax-highlighting' \
-  'history-substring-search' \
+  'environment'               \
+  'terminal'                  \
+  'editor'                    \
+  'history'                   \
+  'directory'                 \
+  'spectrum'                  \
+  'utility'                   \
+  'completion'                \
+  'git'                       \
+  'ruby'                      \
+  'rails'                     \
+  'node'                      \
+  'osx'                       \
+  'syntax-highlighting'       \
+  'history-substring-search'  \
   'prompt'
+
+#
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Editor
@@ -125,17 +132,19 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
 zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
+  'main'     \
   'brackets' \
-  'pattern' \
-  'cursor' \
+  'pattern'  \
+  'line'     \
+  'cursor'   \
   'root'
+
 #
 # Set syntax highlighting styles.
 zstyle ':prezto:module:syntax-highlighting' styles \
-  'builtin' 'bg=blue' \
-  'command' 'bg=blue' \
-  'function' 'bg=blue'
+  'builtin'  'bg=cyan' \
+  'command'  'bg=cyan' \
+  'function' 'bg=cyan'
 
 #
 # Terminal
